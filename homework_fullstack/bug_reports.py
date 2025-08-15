@@ -7,7 +7,7 @@ bug_reports = [
 ]
 def add_bug(description, priority):
     bug_reports.append(f"{description} — {priority}")
-    print(f"✅ Баг '{description} — {priority}' добавлен.")
+    print(f" Баг '{description} — {priority}' добавлен.")
 
 def remove_low_priority():
     global bug_reports
@@ -19,13 +19,13 @@ def sort_bugs():
     bug_reports.sort(key=lambda bug: priority_order.get(bug.split(" — ")[1], 99))
     print("📋 Баги отсортированы по приоритету.")
 
-print("📌 Исходный список багов:")
+print(" Исходный список багов:")
 print(bug_reports)
 
 add_bug("Ошибка 6", "Medium")
 remove_low_priority()
 sort_bugs()
 
-print("\n📌 Итоговый список багов:")
+print("\n Итоговый список багов:")
 for bug in bug_reports:
     print(bug)
